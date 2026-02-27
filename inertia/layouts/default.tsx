@@ -1,8 +1,14 @@
-import { Data } from '@generated/data';
-import { toast, Toaster } from 'sonner';
+import type { Data } from '@generated/data';
 import { usePage } from '@inertiajs/react';
-import { ReactElement, useEffect } from 'react';
-import { Form, Link } from '@adonisjs/inertia/react';
+import {
+  CheckCircle,
+  CloseCircle,
+  CloseSquare,
+  InfoCircle,
+  Refresh,
+} from '@solar-icons/react';
+import { type ReactElement, useEffect } from 'react';
+import { Toaster, toast } from 'sonner';
 
 export default function Layout({
   children,
@@ -20,7 +26,39 @@ export default function Layout({
   return (
     <>
       <main>{children}</main>
-      <Toaster position='top-center' richColors />
+      <Toaster
+        toastOptions={{
+          classNames: {
+            title: 'toastTitle',
+            toast: 'toast',
+            description: 'toastDescription',
+            actionButton: 'toastAction',
+            closeButton: 'toastClose',
+            cancelButton: 'toastCancel',
+          },
+        }}
+        icons={{
+          success: (
+            <CheckCircle className='icon' size={22} weight='BoldDuotone' />
+          ),
+          error: (
+            <CloseCircle className='icon' size={22} weight='BoldDuotone' />
+          ),
+          info: <InfoCircle className='icon' size={22} weight='BoldDuotone' />,
+          close: (
+            <CloseSquare className='icon' size={22} weight='BoldDuotone' />
+          ),
+          loading: (
+            <Refresh
+              className='icon animate-spin'
+              size={22}
+              weight='BoldDuotone'
+            />
+          ),
+        }}
+        position='top-right'
+        // richColors
+      />
     </>
   );
 }

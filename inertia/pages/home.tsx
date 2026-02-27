@@ -2,7 +2,7 @@ import { Link } from '@adonisjs/inertia/react';
 
 export default function Home() {
   return (
-    <div className='w-4/6 h-screen mx-auto flex flex-col items-center justify-center border border-dotted border-y-transparent border-foreground-300 px-40 py-20'>
+    <div className='w-4/6 h-screen mx-auto flex flex-col items-center justify-center border border-dotted border-y-transparent border-foreground-300 dark:border-background-800 dark:border-y-transparent px-40 py-20'>
       <div className='flex flex-col item-start justify-center'>
         <h1 className='text-4xl font-extrabold'>Obsidian</h1>
         <a

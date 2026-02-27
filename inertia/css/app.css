@@ -108,7 +108,7 @@
 }
 
 body {
-  @apply font-display bg-background-900 text-foreground-900 font-medium dark:bg-foreground-950 dark:text-background-100;
+  @apply font-display bg-background-50 text-foreground-950 font-medium dark:bg-foreground-950 dark:text-background-100 select-none;
 }
 
 .demoBox {
@@ -117,4 +117,49 @@ body {
 
 .demoText {
   @apply text-foreground-500;
+}
+
+.label{
+  @apply text-sm text-foreground-900 dark:text-foreground-400
+}
+
+.input{
+  @apply w-full border border-dotted border-foreground-300 dark:border-foreground-800 px-3 py-2 text-sm outline-none
+}
+
+.field{
+  @apply flex flex-col items-start justify-center gap-2 my-3;
+}
+
+button{
+  @apply cursor-pointer hover:bg-foreground-300/40 dark:hover:bg-foreground-900/50;
+}
+
+/* TOAST STYLES */
+.toastTitle{
+  @apply text-foreground-900! dark:text-foreground-200!;
+}
+
+.toastDescription{
+  @apply text-sm! text-foreground-900! dark:text-foreground-500! italic! underline!;
+}
+
+.toast{
+  @apply bg-background-100/2! gap-4! font-display! dark:bg-background-950/2! backdrop-blur rounded-none! border! border-dotted! border-foreground-300! dark:border-foreground-800!;
+}
+
+.icon{
+  @apply text-foreground-950 dark:text-foreground-300;
+}
+
+.toastAction{
+  @apply border! border-dotted! border-foreground-300! dark:border-foreground-800! text-xs! text-foreground-900! dark:text-foreground-300! px-4! py-2! rounded-none!;
+}
+
+.toastCancel{
+  @apply border! border-dotted! border-foreground-300! dark:border-foreground-800! text-xs! text-foreground-900! dark:text-foreground-300! px-4! py-2! rounded-none!;
+}
+
+.toastClose{
+    @apply border! border-dotted! border-foreground-300! dark:border-foreground-800! text-xs! text-foreground-900! dark:text-foreground-300! px-4! py-2! rounded-none!;
 }
