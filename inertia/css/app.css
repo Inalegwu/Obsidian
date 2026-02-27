@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@source "../pages";
+
+@font-face {
+  font-family: Satoshi;
+  src: url("../assets/fonts/satoshi.ttf");
+}
+
+@theme {
+  --font-display: "Satoshi", sans-serif;
+
+  /* overlay animations */
+  --animate-overlayShow: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-contentShow: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* theme colors */
+  /* --color-obsidian-primary: #82aab6; */
+  /* --color-obsidian-secondary: #adcfe6; */
+  /* --color-obsidian-accent: #de8cbc; */
+  /* --color-obsidian-foreground: #2a2529; */
+  /* --color-obsidian-background: #f3f0e7; */
+
+  /* foreground palette */
+  --color-foreground-50: #fbf4fa;
+  --color-foreground-100: #f0e9ee;
+  --color-foreground-200: #d9d2d8;
+  --color-foreground-300: #bbb4b9;
+  --color-foreground-400: #9a9499;
+  --color-foreground-500: #7b757a;
+  --color-foreground-600: #676166;
+  --color-foreground-700: #544e53;
+  --color-foreground-800: #413c40;
+  --color-foreground-900: #2a2529;
+  --color-foreground-950: #1f1a1e;
+
+  /* background palette */
+  --color-background-50: #f9f6ed;
+  --color-background-100: #f3f0e7;
+  --color-background-200: #d7d4cb;
+  --color-background-300: #b9b6ad;
+  --color-background-400: #98968e;
+  --color-background-500: #79776f;
+  --color-background-600: #66635b;
+  --color-background-700: #525049;
+  --color-background-800: #403e36;
+  --color-background-900: #2e2c25;
+  --color-background-950: #1d1b15;
+
+  /* accent palette */
+  --color-accent-50: #fff3f9;
+  --color-accent-100: #ffe4f2;
+  --color-accent-200: #ffc3e5;
+  --color-accent-300: #f09ccd;
+  --color-accent-400: #de8cbc;
+  --color-accent-500: #ab5d8c;
+  --color-accent-600: #954978;
+  --color-accent-700: #7f3564;
+  --color-accent-800: #6a2150;
+  --color-accent-900: #560a3e;
+  --color-accent-950: #3b0229;
+
+  /* secondary palette */
+  --color-secondary-50: #eef8ff;
+  --color-secondary-100: #d7eeff;
+  --color-secondary-200: #adcfe6;
+  --color-secondary-300: #99bbd1;
+  --color-secondary-400: #799ab0;
+  --color-secondary-500: #5a7b90;
+  --color-secondary-600: #46677c;
+  --color-secondary-700: #325467;
+  --color-secondary-800: #1e4154;
+  --color-secondary-900: #073041;
+  --color-secondary-950: #011e2c;
+
+  /* primary palette */
+  --color-primary-50: #e9f9ff;
+  --color-primary-100: #c8f2ff;
+  --color-primary-200: #b2dbe8;
+  --color-primary-300: #94bdc9;
+  --color-primary-400: #82aab6;
+  --color-primary-500: #567d88;
+  --color-primary-600: #426974;
+  --color-primary-700: #2e5660;
+  --color-primary-800: #1a434d;
+  --color-primary-900: #02313b;
+  --color-primary-950: #011f26;
+
+  /* animation keyframes */
+  @keyframes overlayShow {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1,;
+    }
+  }
+
+  @keyframes contentShow {
+    0% {
+      opacity: 0;
+      transform: "translate(-50%,-48%) scale(0.96)";
+    }
+    100% {
+      opacity: 1;
+      transform: "translate(-50%,-50%) scale(1)";
+    }
+  }
+}
+
+body {
+  @apply bg-neutral-100 font-display bg-background-900 text-foreground-900 font-medium;
+}
+
+.demoBox {
+  @apply border border-dotted border-foreground-300 font-bold text-sm w-2/6 mt-5 px-5 py-3 flex flex-col items-start justify-center gap-3;
+}
+
+.demoText {
+  @apply text-foreground-500;
+}
