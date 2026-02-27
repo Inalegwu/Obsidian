@@ -1,47 +1,35 @@
 <div align="center">
-
   <!-- Add your cover image here -->
   <img src="https://github.com/adonisjs/.github/blob/next/docs/react-inertia-adonisjs.png?raw=true" alt="AdonisJS React Inertia Starter Kit" width="100%">
-
-  <h1>React Inertia Starter Kit</h1>
-
-  <p>
-    <strong>A batteries-included AdonisJS starter kit for building modern single-page applications with React.</strong>
-  </p>
-
-  <p>
-    Built for developers who want the power of React with the simplicity of server-side routing and rendering.
-  </p>
-
-  <br>
-
-<a href="#-whats-in-the-box">Features</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-quick-start">Quick Start</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://adonisjs.com">Documentation</a>
-
-  <br>
-  <br>
-
+  <h1>Obsidan</h1>
 </div>
 
 ---
 
 ## ✨ What's in the Box
 
-This starter kit is designed to help you build production-ready single-page applications with React and Inertia.js. It combines the modern DX of React with the simplicity of traditional server-side routing, giving you the best of both worlds.
+This starter kit is designed to help you build production-ready single-page
+applications with React and Inertia.js. It combines the modern DX of React with
+the simplicity of traditional server-side routing, giving you the best of both
+worlds.
 
 ### 🎯 Core Features
 
-- **🔐 Authentication System** - Complete user signup, login, and session management out of the box
+- **🔐 Authentication System** - Complete user signup, login, and session
+  management out of the box
 - **⚛️ React 19** - Latest React with modern hooks and concurrent features
-- **🔄 Inertia.js** - Build SPAs without the API complexity—server-side routing that feels like client-side
-- **🎨 Custom Design System** - Beautiful, accessible components with modern CSS (OKLCH color system)
+- **🔄 Inertia.js** - Build SPAs without the API complexity—server-side routing
+  that feels like client-side
+- **🎨 Custom Design System** - Beautiful, accessible components with modern CSS
+  (OKLCH color system)
 - **✅ Form Validation** - Powered by VineJS with automatic error handling
 - **🔔 Toast Notifications** - Built-in toast system using Sonner
-- **🛡️ Security First** - CSRF protection, Shield middleware, and secure session handling
+- **🛡️ Security First** - CSRF protection, Shield middleware, and secure session
+  handling
 - **🔒 Type Safety** - End-to-end TypeScript with Tuyau for type-safe routing
+- **TailwindCSS**- Styling preconfigured with a default theme to get you started
+- **Radix Primitives** - Unstyled components to build your own Design system
+- **Solar Icons** - Modern Icon Pack with Beautiful Variants
 
 ### 🔧 Tech Stack
 
@@ -122,129 +110,34 @@ This starter kit is designed to help you build production-ready single-page appl
 
 ---
 
-## 🚀 Quick Start
-
-### Create a New Project
-
-```bash
-npm init adonisjs@latest -- -K=inertia
-```
-
-During setup, you'll be asked to choose:
-
-- **Frontend adapter**: Select `react`
-- **Database**: Choose your preferred database (SQLite, PostgreSQL, MySQL, MSSQL)
-- **Auth guard**: Select `session` for cookie-based authentication
-- **SSR**: Choose whether to enable server-side rendering (optional)
-
-This command will:
-
-- Clone this starter kit
-- Install all dependencies
-- Set up your `.env` file
-- Generate your app encryption key
-- Configure your database
-- Configure Inertia with React
-- Run migrations
-
-### Start Developing
-
-```bash
-# Run the development server with hot reload
-node ace serve --hmr
-
-# Run tests
-node ace test
-
-# Type check both backend and frontend
-npm run typecheck
-
-# Lint your code
-npm run lint
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-Your app will be running at `http://localhost:3333`
-
----
-
-## 📚 Learn More
-
-<table>
-  <tr>
-    <td>
-      <a href="https://docs.adonisjs.com"><strong>📖 AdonisJS Docs</strong></a>
-      <br>
-      <span>Complete guide to AdonisJS</span>
-    </td>
-    <td>
-      <a href="https://inertiajs.com"><strong>🔄 Inertia.js</strong></a>
-      <br>
-      <span>Learn about server-driven SPAs</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://react.dev"><strong>⚛️ React Docs</strong></a>
-      <br>
-      <span>Modern React with hooks</span>
-    </td>
-    <td>
-      <a href="https://tuyau.dev"><strong>🔒 Tuyau</strong></a>
-      <br>
-      <span>Type-safe routing and API calls</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://lucid.adonisjs.com"><strong>💾 Lucid ORM</strong></a>
-      <br>
-      <span>Database queries and relationships</span>
-    </td>
-    <td>
-      <a href="https://vinejs.dev"><strong>✅ VineJS</strong></a>
-      <br>
-      <span>Schema validation guide</span>
-    </td>
-  </tr>
-</table>
-
----
-
 ## 🎨 Philosophy
 
 This starter kit embraces the **modern full-stack** approach to web development:
 
-- **Server-Side Routing** - No API complexity, just controllers returning Inertia responses
+- **Server-Side Routing** - No API complexity, just controllers returning
+  Inertia responses
 - **Client-Side Experience** - React handles the UI with smooth SPA navigation
-- **Type Safety Everywhere** - TypeScript across frontend and backend with Tuyau integration
-- **Convention Over Configuration** - Sensible defaults, escape hatches when you need them
+- **Type Safety Everywhere** - TypeScript across frontend and backend with Tuyau
+  integration
+- **Convention Over Configuration** - Sensible defaults, escape hatches when you
+  need them
 - **Developer Experience** - Hot reload, great error messages, instant feedback
 - **Production Ready** - Security, validation, and testing built-in
 
 ### Why Inertia.js?
 
-Traditional SPAs require building and maintaining a separate API. Inertia.js eliminates this complexity by letting your controllers return data directly to your React components. You get the smooth navigation of a SPA with the simplicity of traditional server-side routing.
-
----
-
-## 🤝 Contributing
-
-This starter kit is maintained by the AdonisJS team. Found a bug or have a suggestion? [Open an issue](https://github.com/adonisjs/inertia-starter-kit/issues) or submit a pull request!
-
----
+Traditional SPAs require building and maintaining a separate API. Inertia.js
+eliminates this complexity by letting your controllers return data directly to
+your React components. You get the smooth navigation of a SPA with the
+simplicity of traditional server-side routing.
 
 ## 📄 License
 
-This starter kit is open-sourced software licensed under the [MIT license](LICENSE).
+This starter kit is open-sourced software licensed under the
+[MIT license](LICENSE).
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by the AdonisJS team</sub>
+  <sub>Built with ❤️ by DisgruntledDevs</sub>
 </div>
