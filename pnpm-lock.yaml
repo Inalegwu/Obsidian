@@ -50,6 +50,9 @@ importers:
       '@vinejs/vine':
         specifier: ^4.3.0
         version: 4.3.0
+      adonisjs-server-stats:
+        specifier: ^1.11.0
+        version: 1.11.0(@adonisjs/core@7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0))(@adonisjs/lucid@22.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@adonisjs/core@7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0))(@vinejs/vine@4.3.0)(better-sqlite3@12.6.2)(luxon@3.7.2))(better-sqlite3@12.6.2)(edge.js@6.5.0)(knex@3.1.0(better-sqlite3@12.6.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       better-sqlite3:
         specifier: ^12.6.2
         version: 12.6.2
@@ -2273,6 +2276,48 @@ packages:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  adonisjs-server-stats@1.11.0:
+    resolution: {integrity: sha512-8UeIi36rL7/3DmlX8z7Ruq3z1NigXTTSAjQI9XcRT36w1VxnGuKuK4LnhpFj61Zf6NKXk7jKt4ddRVkK1I00qQ==}
+    peerDependencies:
+      '@adonisjs/core': ^6.0.0 || ^7.0.0-next || ^7.0.0
+      '@adonisjs/lucid': ^21.0.0
+      '@adonisjs/redis': ^9.0.0
+      '@adonisjs/transmit': ^1.0.0
+      '@adonisjs/transmit-client': ^1.0.0
+      '@julr/adonisjs-prometheus': ^1.4.0
+      better-sqlite3: ^7.0.0 || ^11.0.0
+      bullmq: ^5.0.0
+      edge.js: ^6.0.0
+      knex: ^3.0.0
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+      vue: ^3.3.0
+    peerDependenciesMeta:
+      '@adonisjs/lucid':
+        optional: true
+      '@adonisjs/redis':
+        optional: true
+      '@adonisjs/transmit':
+        optional: true
+      '@adonisjs/transmit-client':
+        optional: true
+      '@julr/adonisjs-prometheus':
+        optional: true
+      better-sqlite3:
+        optional: true
+      bullmq:
+        optional: true
+      edge.js:
+        optional: true
+      knex:
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      vue:
+        optional: true
 
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
@@ -6266,6 +6311,17 @@ snapshots:
       acorn: 8.16.0
 
   acorn@8.16.0: {}
+
+  adonisjs-server-stats@1.11.0(@adonisjs/core@7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0))(@adonisjs/lucid@22.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@adonisjs/core@7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0))(@vinejs/vine@4.3.0)(better-sqlite3@12.6.2)(luxon@3.7.2))(better-sqlite3@12.6.2)(edge.js@6.5.0)(knex@3.1.0(better-sqlite3@12.6.2))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+    dependencies:
+      '@adonisjs/core': 7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0)
+    optionalDependencies:
+      '@adonisjs/lucid': 22.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@adonisjs/core@7.0.0(@adonisjs/assembler@8.0.0(typescript@5.9.3))(@vinejs/vine@4.3.0)(edge.js@6.5.0)(pino-pretty@13.1.3)(youch@4.1.0))(@vinejs/vine@4.3.0)(better-sqlite3@12.6.2)(luxon@3.7.2)
+      better-sqlite3: 12.6.2
+      edge.js: 6.5.0
+      knex: 3.1.0(better-sqlite3@12.6.2)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   ajv@6.14.0:
     dependencies:
