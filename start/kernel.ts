@@ -28,7 +28,8 @@ server.use([
   () => import('@adonisjs/cors/cors_middleware'),
   () => import('@adonisjs/vite/vite_middleware'),
   () => import('#middleware/inertia_middleware'),
-  () => import('adonisjs-server-stats/middleware')
+  () => import('#middleware/evlog_middleware'),
+  () => import('adonisjs-server-stats/middleware'),
 ]);
 
 /**
