@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 /// <reference path="../manifest.d.ts" />
 
-import type { ExtractBody, ExtractQuery, ExtractQueryForGet, ExtractResponse } from '@tuyau/core/types'
-import type { InferInput } from '@vinejs/vine/types'
+import type { ExtractBody, ExtractErrorResponse, ExtractQuery, ExtractQueryForGet, ExtractResponse } from '@tuyau/core/types'
+import type { InferInput, SimpleError } from '@vinejs/vine/types'
 
 export type ParamValue = string | number | bigint | boolean
 
@@ -16,6 +16,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.config': {
@@ -27,6 +28,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.diagnostics': {
@@ -38,6 +40,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.queries': {
@@ -49,6 +52,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.events': {
@@ -60,6 +64,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.routes': {
@@ -71,6 +76,19 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
+    }
+  }
+  'server-stats.debug.queryExplain': {
+    methods: ["GET","HEAD"]
+    pattern: '/admin/api/debug/queries/:id/explain'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.logs': {
@@ -82,6 +100,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.emails': {
@@ -93,6 +112,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.emailPreview': {
@@ -104,6 +124,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.traces': {
@@ -115,6 +136,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.debug.traceDetail': {
@@ -126,6 +148,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.dashboard': {
@@ -137,6 +160,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.overview': {
@@ -148,6 +172,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.overview.chart': {
@@ -159,6 +184,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.requests': {
@@ -170,6 +196,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.requests.show': {
@@ -181,6 +208,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.queries': {
@@ -192,6 +220,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.events': {
@@ -203,6 +232,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.routes': {
@@ -214,6 +244,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.logs': {
@@ -225,6 +256,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.emails': {
@@ -236,6 +268,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.emails.preview': {
@@ -247,6 +280,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.traces': {
@@ -258,6 +292,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.traces.show': {
@@ -269,6 +304,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.queries.grouped': {
@@ -280,6 +316,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.queries.explain': {
@@ -291,6 +328,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.cache': {
@@ -302,6 +340,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.cache.show': {
@@ -313,6 +352,7 @@ export interface Registry {
       params: { key: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.cache.delete': {
@@ -324,6 +364,7 @@ export interface Registry {
       params: { key: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.jobs': {
@@ -335,6 +376,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.jobs.show': {
@@ -346,6 +388,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.jobs.retry': {
@@ -357,6 +400,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.config': {
@@ -368,6 +412,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.filters': {
@@ -379,6 +424,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.filters.create': {
@@ -390,6 +436,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'server-stats.filters.delete': {
@@ -401,6 +448,7 @@ export interface Registry {
       params: { id: ParamValue }
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'home': {
@@ -412,6 +460,7 @@ export interface Registry {
       params: {}
       query: {}
       response: unknown
+      errorResponse: unknown
     }
   }
   'new_account.create': {
@@ -423,6 +472,7 @@ export interface Registry {
       params: {}
       query: {}
       response: ExtractResponse<Awaited<ReturnType<import('#controllers/new_account_controller').default['create']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/new_account_controller').default['create']>>>
     }
   }
   'new_account.store': {
@@ -434,6 +484,7 @@ export interface Registry {
       params: {}
       query: ExtractQuery<InferInput<(typeof import('#validators/user').signupValidator)>>
       response: ExtractResponse<Awaited<ReturnType<import('#controllers/new_account_controller').default['store']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/new_account_controller').default['store']>>> | { status: 422; response: { errors: SimpleError[] } }
     }
   }
   'session.create': {
@@ -445,6 +496,7 @@ export interface Registry {
       params: {}
       query: {}
       response: ExtractResponse<Awaited<ReturnType<import('#controllers/session_controller').default['create']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/session_controller').default['create']>>>
     }
   }
   'session.store': {
@@ -456,6 +508,7 @@ export interface Registry {
       params: {}
       query: {}
       response: ExtractResponse<Awaited<ReturnType<import('#controllers/session_controller').default['store']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/session_controller').default['store']>>>
     }
   }
   'session.destroy': {
@@ -467,6 +520,7 @@ export interface Registry {
       params: {}
       query: {}
       response: ExtractResponse<Awaited<ReturnType<import('#controllers/session_controller').default['destroy']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/session_controller').default['destroy']>>>
     }
   }
 }

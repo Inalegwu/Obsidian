@@ -10,6 +10,7 @@ export type ScannedRoutes = {
     'server-stats.debug.queries': { paramsTuple?: []; params?: {} }
     'server-stats.debug.events': { paramsTuple?: []; params?: {} }
     'server-stats.debug.routes': { paramsTuple?: []; params?: {} }
+    'server-stats.debug.queryExplain': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'server-stats.debug.logs': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emails': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emailPreview': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
@@ -54,6 +55,7 @@ export type ScannedRoutes = {
     'server-stats.debug.queries': { paramsTuple?: []; params?: {} }
     'server-stats.debug.events': { paramsTuple?: []; params?: {} }
     'server-stats.debug.routes': { paramsTuple?: []; params?: {} }
+    'server-stats.debug.queryExplain': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'server-stats.debug.logs': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emails': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emailPreview': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
@@ -91,6 +93,7 @@ export type ScannedRoutes = {
     'server-stats.debug.queries': { paramsTuple?: []; params?: {} }
     'server-stats.debug.events': { paramsTuple?: []; params?: {} }
     'server-stats.debug.routes': { paramsTuple?: []; params?: {} }
+    'server-stats.debug.queryExplain': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'server-stats.debug.logs': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emails': { paramsTuple?: []; params?: {} }
     'server-stats.debug.emailPreview': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
