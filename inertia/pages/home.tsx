@@ -32,6 +32,17 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-start justify-between w-2/6 gap-4 h-full bg-white border border-solid border-background-200 p-6 rounded-lg corner-squircle">
           <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-lg underline underline-offset-2">Monitoring Set up</h1>
+            <span className="text-sm text-foreground-500">Prebuilt monitoring panel pre installed thanks to adonisjs-server-stats</span>
+          </div>
+          <div className="w-full flex items-center text-xs justify-end gap-4 underline">
+            <Link href="https://github.com/simulieren/adonisjs-server-stats">
+              See Server Stats
+            </Link>
+        </div>
+        </div>
+        <div className="flex flex-col items-start justify-between w-2/6 gap-4 h-full bg-white border border-solid border-background-200 p-6 rounded-lg corner-squircle">
+          <div className="flex flex-col gap-2">
             <h1 className="font-bold text-lg underline underline-offset-2">Cutting Edge</h1>
             <span className="text-sm text-foreground-500">Always up-to-date with the latest technologies to build the future with AdonisJS</span>
           </div>
