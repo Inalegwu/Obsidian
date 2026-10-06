@@ -10,11 +10,11 @@ import {
   EyeClosed,
   TrashBinMinimalistic,
 } from "@solar-icons/react/ssr";
-import { format } from "date-fns";
 import { useState } from "react";
 import DateWheelPicker from "./date-picker";
 import { CaretDownIcon, CheckIcon } from "./icons";
 import Switch from "./switch";
+import { DateTime} from "luxon";
 
 type SelectOption = {
   name: string;
@@ -233,7 +233,7 @@ function DateInput({
         <CalendarMinimalistic size={12} weight="Bold" />
         <span>
           {field.value
-            ? format(new Date(field.value as string | Date), dateFormat)
+            ? DateTime.fromJSDate(new Date(field.value as string | Date)).toFormat(dateFormat)
             : (placeholder ?? "Pick a date")}
         </span>
       </Popover.Trigger>

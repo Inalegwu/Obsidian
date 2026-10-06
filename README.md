@@ -28,7 +28,7 @@ worlds.
   handling
 - **🔒 Type Safety** - End-to-end TypeScript with Tuyau for type-safe routing
 - **TailwindCSS**- Styling preconfigured with a default theme to get you started
-- **Radix Primitives** - Unstyled components to build your own Design system
+- **BaseUI Primitives** - Unstyled components to build your own Design system
 - **Solar Icons** - Modern Icon Pack with Beautiful Variants
 
 ### 🔧 Tech Stack
