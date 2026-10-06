@@ -3,11 +3,11 @@ import { Link } from '@adonisjs/inertia/react';
 export default function Home() {
   return (
     <div className='w-[85%] h-screen flex flex-col mx-auto p-5 items-start justify-center border-x border-x-solid border-x-foreground-200/30'>
-      <div className='absolute z-1 top-0 bg-background-100 border-b border-b-solid border-b-foreground-200/30 left-0 px-5 py-3 flex items-center justify-between w-full'>
+      <div className='absolute z-1 top-0 bg-white border-b border-b-solid border-b-foreground-200/60 left-0 px-5 py-4 flex items-center justify-between w-full'>
         <Link route="home" className="uppercase font-bold">Obsidian</Link>
         <nav className="flex items-center justify-end gap-5">
           <Link route="new_account.create" className='text-xs font-medium transition uppercase text-foreground-500 hover:text-foreground-950 hover:underline'>Create Account</Link>
-       <Link route="session.create" className='px-5 py-1.25 border border-solid border-foreground-200 text-xs uppercase rounded-md flex items-center justify-center corner-squircle bg-white'>Login</Link>
+       <Link route="session.create" className='px-5 py-1.25 text-xs uppercase rounded-md flex items-center justify-center corner-squircle bg-primary-500 text-white'>Login</Link>
         </nav>
       </div>
       <h1 className="text-7xl font-extrabold">Obsidian</h1>

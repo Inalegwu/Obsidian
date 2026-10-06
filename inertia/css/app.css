@@ -120,11 +120,15 @@ body {
 }
 
 .label{
-  @apply text-xs text-foreground-600 font-medium uppercase
+  @apply text-[11px] text-foreground-600 font-medium uppercase
+}
+
+.formError{
+  @apply text-[11px] text-red-500 uppercase
 }
 
 .field{
-  @apply flex flex-col items-start justify-center gap-2 my-3;
+  @apply flex flex-col items-start justify-center gap-1 my-2;
 }
 
 button{
