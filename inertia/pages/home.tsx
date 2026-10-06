@@ -2,34 +2,41 @@ import { Link } from '@adonisjs/inertia/react';
 
 export default function Home() {
   return (
-    <div className='w-4/6 h-screen mx-auto flex flex-col items-center justify-center border border-dotted border-y-transparent border-foreground-300 dark:border-background-800 dark:border-y-transparent px-40 py-20'>
-      <div className='flex flex-col item-start justify-center'>
-        <h1 className='text-4xl font-extrabold'>Obsidian</h1>
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www.google.com/search?q=obsidian+mineral&sca_esv=82e1ade9a4b9d4d3&hl=en&sxsrf=ANbL-n6944Ix11q84QmPM5uFZm-ZxW6-9A%3A1772217296206&ei=0OOhaburDOqQhbIPrsOQgAs&biw=1366&bih=701&ved=0ahUKEwi7057zp_qSAxVqSEEAHa4hBLAQ4dUDCBE&uact=5&oq=obsidian+mineral&gs_lp=Egxnd3Mtd2l6LXNlcnAiEG9ic2lkaWFuIG1pbmVyYWwyCxAAGIAEGIoFGJECMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDILEAAYgAQYigUYkQIyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjtMFCyAVjHLXACeAGQAQCYAfcCoAHUEaoBBTItOC4xuAEDyAEA-AEBmAILoALZEsICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIOEAAY5AIY1gQYsAPYAQHCAhMQLhiABBiKBRhDGMgDGLAD2AEBwgIZEC4YgAQYigUYQxjHARjRAxjIAxiwA9gBAcICChAAGIAEGIoFGEPCAhAQLhiABBiKBRhDGMcBGNEDwgIKEAAYgAQYFBiHApgDAIgGAZAGEboGBggBEAEYCZIHBzIuMC44LjGgB8IwsgcFMi04LjG4B7kSwgcGMi0xLjEwyAdygAgB&sclient=gws-wiz-serp'
-          className='text-xs text-foreground-600 italic underline underline-offset'>
-          a naturally occurring volcanic glass (technically a mineraloid) formed
-          by the rapid cooling of silica-rich lava, preventing crystal growth
-        </a>
+    <div className='w-[85%] h-screen flex flex-col mx-auto p-5 items-start justify-center border-x border-x-solid border-x-foreground-200/30'>
+      <div className='absolute z-1 top-0 bg-background-100 border-b border-b-solid border-b-foreground-200/30 left-0 px-5 py-3 flex items-center justify-between w-full'>
+        <Link route="home" className="uppercase font-bold">Obsidian</Link>
+        <nav className="flex items-center justify-end gap-5">
+          <Link route="new_account.create" className='text-xs font-medium transition uppercase text-foreground-500 hover:text-foreground-950 hover:underline'>Create Account</Link>
+       <Link route="session.create" className='px-5 py-1.25 border border-solid border-foreground-200 text-xs uppercase rounded-md flex items-center justify-center corner-squircle bg-white'>Login</Link>
+        </nav>
       </div>
-      <span className='text-base text-foreground-600 my-4'>
-        A polished starter kit to get from zero to 100 immediately with AdonisJS
-        and Inertia JS with React to build fullstack NodeJS Applications the
-        best way
-      </span>
-      <div className='flex flex-col items-start w-full justify-center gap-3 my-3'>
-        <h2 className='text-lg text-foreground-600'>Auth Already Configured</h2>
-        <div className='flex items-center justify-start gap-3'>
-          <Link route='new_account.create' className='text-sm underline'>
-            Signup
-          </Link>
-          <Link route='session.create' className='text-sm underline'>
-            Login
-          </Link>
+      <h1 className="text-7xl font-extrabold">Obsidian</h1>
+      <div className="w-full h-[35vh] flex mt-20 gap-4 items-center justify-around">
+        <div className="flex flex-col items-start justify-between w-2/6 gap-4 h-full bg-white border border-solid border-background-200 p-6 rounded-lg corner-squircle">
+          <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-lg underline underline-offset-2">Auth Configured</h1>
+            <span className="text-sm text-foreground-500">Login and account creation flows already implemented along with models and connections. Just swap out for your database configuration</span>
+
+          </div>
+          <div className="w-full flex items-center text-xs justify-end gap-4 underline">
+            <Link route="session.create">Login</Link>
+<Link route="new_account.create">Create Account</Link>
+</div>
+        </div>
+        <div className="flex flex-col items-start justify-between w-2/6 gap-4 h-full bg-white border border-solid border-background-200 p-6 rounded-lg corner-squircle">
+          <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-lg underline underline-offset-2">Themed from the Get Go</h1>
+            <span className="text-sm text-foreground-500">Tailwindcss preconfigured with default background, foreground, primary, secondary and accent themes with standard naming that can be easily replaced without breaking anything</span>
+
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-between w-2/6 gap-4 h-full bg-white border border-solid border-background-200 p-6 rounded-lg corner-squircle">
+          <div className="flex flex-col gap-2">
+            <h1 className="font-bold text-lg underline underline-offset-2">Cutting Edge</h1>
+            <span className="text-sm text-foreground-500">Always up-to-date with the latest technologies to build the future with AdonisJS</span>
+          </div>
         </div>
       </div>
-    </div>
+   </div>
   );
 }

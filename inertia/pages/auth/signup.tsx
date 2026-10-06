@@ -3,9 +3,9 @@ import {ArrowLeft} from "@solar-icons/react";
 
 export default function Signup() {
   return (
-    <div className='w-4/6 px-20 gap-5 h-screen mx-auto flex flex-col items-center justify-center border border-dotted border-foreground-300 border-y-transparent dark:border-foreground-800 dark:border-y-transparent'>
+    <div className='w-[85%] px-20 gap-5 h-screen mx-auto flex flex-col items-center justify-center'>
       <div className='w-full flex items-center justify-start gap-4'>
-        <button onClick={()=>window.history.back()} className='border border-dotted border-foreground-300 dark:border-foreground-800 p-2'>
+        <button onClick={()=>window.history.back()} className='bg-white rounded-md corner-squircle flex items-center justify-center border border-solid border-background-200 p-2'>
           <ArrowLeft size={16} weight="Linear"/>
         </button>
         <div>
