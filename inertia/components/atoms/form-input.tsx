@@ -2,19 +2,12 @@ import { Checkbox } from "@base-ui/react/checkbox";
 import { Combobox } from "@base-ui/react/combobox";
 import { Input } from "@base-ui/react/input";
 import { Popover } from "@base-ui/react/popover";
-import {
-  AddCircle,
-  CalendarMinimalistic,
-  CloseCircle,
-  Eye,
-  EyeClosed,
-  TrashBinMinimalistic,
-} from "@solar-icons/react/ssr";
 import { useState } from "react";
 import DateWheelPicker from "./date-picker";
 import { CaretDownIcon, CheckIcon } from "./icons";
 import Switch from "./switch";
-import { DateTime} from "luxon";
+import { DateTime } from "luxon";
+import SolarIcon from "./icon";
 
 type SelectOption = {
   name: string;
@@ -230,7 +223,7 @@ function DateInput({
         data-empty={!field.value}
         className="w-full border border-solid border-neutral-200 text-neutral-500 rounded-sm text-sm py-2 px-2 bg-neutral-100 flex items-center justify-start gap-2"
       >
-        <CalendarMinimalistic size={12} weight="Bold" />
+        <SolarIcon name="calendar-minimalistic" size={12} weight="Bold" />
         <span>
           {field.value
             ? DateTime.fromJSDate(new Date(field.value as string | Date)).toFormat(dateFormat)
@@ -276,7 +269,7 @@ function PasswordInput({ field, disabled, placeholder }: InputProps) {
           disabled={disabled}
           onClick={() => setVisible((v) => !v)}
         >
-          {isVisible ? <EyeClosed weight="Bold" /> : <Eye weight="Bold" />}
+          {isVisible ? <SolarIcon name="eye-closed" weight="Bold" /> : <SolarIcon name="eye" weight="Bold" />}
         </button>
       </div>
     </div>
@@ -367,7 +360,7 @@ function SelectInput({
             className="combobox-clear flex h-full w-6 items-center justify-center border-0 bg-transparent p-0 text-neutral-400"
             aria-label="Clear selection"
           >
-            <CloseCircle weight="Bold" />
+            <SolarIcon name="close" weight="Bold" />
           </Combobox.Clear>
           <Combobox.Trigger
             className="flex h-full w-6 items-center justify-center border-0 bg-transparent p-0 text-neutral-400"
@@ -448,7 +441,7 @@ function ArrayInput({
           onClick={append}
           className="bg-black p-1 rounded-full text-white"
         >
-          <AddCircle weight="Bold" size={14} />
+          <SolarIcon name="add" weight="Bold" size={14} />
         </button>
       </div>
 
@@ -482,7 +475,7 @@ function ArrayInput({
               onClick={() => remove(index)}
               className="flex items-center justify-center rounded-sm hover:bg-red-200"
             >
-              <TrashBinMinimalistic size={12} />
+              <SolarIcon name="trash-bin-minimalistic" size={12} />
             </button>
           </div>
         ))}

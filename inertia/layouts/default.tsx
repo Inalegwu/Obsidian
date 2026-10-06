@@ -1,14 +1,8 @@
 import type { Data } from '@generated/data';
 import { usePage } from '@inertiajs/react';
-import {
-  CheckCircle,
-  CloseCircle,
-  CloseSquare,
-  InfoCircle,
-  Refresh,
-} from '@solar-icons/react';
 import { type ReactElement, useEffect } from 'react';
 import { Toaster, toast } from 'sonner';
+import { SolarIcon } from '../components/atoms';
 
 export default function Layout({
   children,
@@ -39,17 +33,17 @@ export default function Layout({
         }}
         icons={{
           success: (
-            <CheckCircle className='icon' size={22} weight='BoldDuotone' />
+            <SolarIcon name="check" className='icon' size={22} weight='BoldDuotone' />
           ),
           error: (
-            <CloseCircle className='icon' size={22} weight='BoldDuotone' />
+            <SolarIcon name="close" className='icon' size={22} weight='BoldDuotone' />
           ),
-          info: <InfoCircle className='icon' size={22} weight='BoldDuotone' />,
+          info: <SolarIcon name="info" className='icon' size={22} weight='BoldDuotone' />,
           close: (
-            <CloseSquare className='icon' size={22} weight='BoldDuotone' />
+            <SolarIcon name="close" className='icon' size={22} weight='BoldDuotone' />
           ),
           loading: (
-            <Refresh
+            <SolarIcon name="refresh"
               className='icon animate-spin'
               size={22}
               weight='BoldDuotone'

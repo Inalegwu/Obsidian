@@ -10,6 +10,7 @@ import {
 } from 'adonisjs-server-stats/collectors'
 
 export default defineConfig({
+  authorize:(ctx)=>ctx.auth?.user.role==="admin",
   pollInterval: 3000,
   dashboard:true,
   toolbar:true,

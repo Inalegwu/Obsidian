@@ -1,23 +1,24 @@
-import { Tooltip as RTooltip } from 'radix-ui';
+import { Tooltip as BaseTooltip } from '@base-ui/react/tooltip';
 
-export default function Tooltip(
-  props: RTooltip.TooltipProps & { content: string; asChild?: boolean },
-) {
+type Props = {
+  children: React.ReactElement;
+  content: string;
+};
+
+export default function Tooltip({ children, content }: Props) {
   return (
-    <RTooltip.Provider>
-      <RTooltip.Root>
-        <RTooltip.Trigger asChild={props.asChild}>
-          {props.children}
-        </RTooltip.Trigger>
-        <RTooltip.Portal>
-          <RTooltip.Content
-            side='top'
-            className='select-none rounded-md border border-solid border-neutral-200 bg-white px-3 py-2 text-xs font-medium leading-none text-black shadow-md will-change-[transform,opacity] data-[state=delayed-open]:date-[side=bottom]:animate-slideUpAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade'>
-            {props.content}
-            <RTooltip.Arrow className='fill-white' />
-          </RTooltip.Content>
-        </RTooltip.Portal>
-      </RTooltip.Root>
-    </RTooltip.Provider>
+    <BaseTooltip.Provider>
+      <BaseTooltip.Root>
+        <BaseTooltip.Trigger render={children} />
+        <BaseTooltip.Portal>
+          <BaseTooltip.Positioner sideOffset={4}>
+            <BaseTooltip.Popup className='bg-neutral-950 border border-solid border-neutral-900 px-4 py-2 text-xs'>
+              <BaseTooltip.Arrow className="relative block w-3 h-1.5 overflow-clip data-[side=bottom]:-top-1.5 data-[side=left]:-right-2.25 data-[side=left]:rotate-90 data-[side=right]:-left-2.25 data-[side=right]:-rotate-90 data-[side=top]:-bottom-1.5 data-[side=top]:rotate-180 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-[calc(6px*sqrt(2))] before:h-[calc(6px*sqrt(2))] before:bg-neutral-950 before:border before:border-neutral-900 before:transform-[translate(-50%,50%)_rotate(45deg)]" />
+              {content}
+            </BaseTooltip.Popup>
+          </BaseTooltip.Positioner>
+        </BaseTooltip.Portal>
+      </BaseTooltip.Root>
+    </BaseTooltip.Provider>
   );
 }
