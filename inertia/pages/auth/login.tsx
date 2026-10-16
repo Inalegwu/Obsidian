@@ -1,16 +1,20 @@
 import { Form } from '@adonisjs/inertia/react';
-import { ArrowLeft } from '@solar-icons/react';
+import { ArrowLeftIcon } from '@solar-icons/react/dynamic';
 import { Spinner } from '~/components/atoms';
 
 export default function Login() {
   return (
     <div className='w-full h-screen mx-auto flex'>
-      <Form className='w-4/6 flex flex-col justify-center bg-white border-r border-r-solid border-r-background-200/60 p-10 h-full' route='session.store'>
-        {({ errors,processing }) => (
+      <Form
+        className='w-4/6 flex flex-col justify-center bg-white border-r border-r-solid border-r-background-200/60 p-10 h-full'
+        route='session.store'>
+        {({ errors, processing }) => (
           <>
-            <div className="flex flex-col items-start justify-center my-3 gap-2">
-              <button onClick={()=>window.history.back()} className='bg-background-100 rounded-md corner-squircle flex items-center justify-center border border-solid border-background-200 p-2'>
-                <ArrowLeft size={16} weight="Linear"/>
+            <div className='flex flex-col items-start justify-center my-3 gap-2'>
+              <button
+                onClick={() => window.history.back()}
+                className='bg-background-100 rounded-md corner-squircle flex items-center justify-center border border-solid border-background-200 p-2'>
+                <ArrowLeftIcon size={16} weight='Linear' />
               </button>
               <div>
                 <h1 className='font-medium text-lg'> Login </h1>
@@ -55,14 +59,14 @@ export default function Login() {
               <button
                 type='submit'
                 className='w-full rounded-md corner-squircle bg-primary-500 p-2 text-xs my-5 flex items-center justify-center uppercase text-white'>
-                {processing?<Spinner size={12}/>:<span>Login</span>}
+                {processing ? <Spinner size={12} /> : <span>Login</span>}
               </button>
             </div>
           </>
         )}
       </Form>
       <div className='w-2/6 h-screen flex items-center justify-center'>
-       content
+        content
       </div>
     </div>
   );

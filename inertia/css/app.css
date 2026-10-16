@@ -135,10 +135,6 @@ button{
   @apply cursor-pointer active:scale-[0.97];
 }
 
-a{
-  @apply active:scale-[0.97]
-}
-
 .input{
   @apply bg-white w-full p-1.5 outline-none rounded-md border border-solid border-background-200 text-sm;
 }
